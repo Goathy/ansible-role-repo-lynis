@@ -1,3 +1,5 @@
+# Ansible Role: CISOfy Software Lynis Repository
+
 Installs the [CISOfy Software - Lynis](https://cisofy.com/lynis/) Community for RHEL.
 
 Requirements
