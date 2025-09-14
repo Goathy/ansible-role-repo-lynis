@@ -1,4 +1,4 @@
-Installs the CISOfy Software - Lynis Community for RHEL.
+Installs the [CISOfy Software - Lynis](https://cisofy.com/lynis/) Community for RHEL.
 
 Requirements
 ------------
@@ -39,3 +39,8 @@ License
 -------
 
 [MIT](./LICENSE)
+
+Author Information
+------------------
+
+This role was created in 2014 by [Jakub Gałecki](https://github.com/Goathy).
