@@ -1,0 +1,13 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: repo-lynis
+  author: goathy
+  description: CISOfy Software Lynis repository for RHEL
+  issue_tracker_url: https://github.com/Goathy/ansible-role-repo-lynis/issues/tracker
+  license: MIT
+  min_ansible_version: 2.1
+  galaxy_tags:
+    - lynis
+    - audit

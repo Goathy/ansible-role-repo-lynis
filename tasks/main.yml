@@ -1,0 +1,30 @@
+---
+- name: check if Lynis repo is already configured
+  ansible.builtin.stat:
+    path: "{{ lynis_repofile_path }}"
+  register: lynis_repofile_result
+
+- name: create Lynis repofile
+  ansible.builtin.template:
+    src: "cisofy-lynis.repo.j2"
+    dest: "{{ lynis_repofile_path }}"
+    mode: "0644"
+    owner: 0
+    group: 0
+  when: not lynis_repofile_result.stat.exists
+
+- name: install Lynis
+  ansible.builtin.dnf:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - "ca-certificates"
+    - "curl"
+    - "nss"
+    - "openssl"
+    - "lynis"
+  when: lynis_install == true
+
+
+
+
